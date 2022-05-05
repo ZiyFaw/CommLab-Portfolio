@@ -3,7 +3,15 @@ var intro_man = document.getElementById('intro-man');
 
 var fallen_man = document.getElementById('fallen-man');
 
+var demon = document.getElementById('demon');
+
 var content = document.getElementById('content');
+
+var intro = document.getElementById("intro");
+
+var scream = new Audio('sounds/scream.wav');
+
+var impact = new Audio('sounds/impact.wav');
 
 var showCard = false;
 
@@ -17,6 +25,15 @@ var showCard = false;
         $(window).scrollTop(0);
   });
 
+
+function playAudio() {
+  scream.play();
+
+  setTimeout(()=>{
+    impact.play();
+  }, 6000);
+}
+
 function startFall() {
     intro_man.src = "images/man_falling_matte.gif";
     intro_man.classList.add("drop-anim");
@@ -24,10 +41,13 @@ function startFall() {
         content.scrollIntoView();
         animateFallenMan();
         // console.log('after')
-    }, 1000);
+    }, 7000);
 }
 
-intro_man.addEventListener("click", startFall);
+intro_man.addEventListener("click", ()=>{
+   startFall();
+   playAudio();
+  });
 
 function animateFallenMan() {
     console.log('out');
@@ -42,6 +62,7 @@ function animateFallenMan() {
                     fallen_man.src = "images/poof.png";
                     setTimeout(()=>{
                         fallen_man.src = "images/card.png";
+                        demon.style.display = "inline";
                         showCard = true;
                     }, 2000);
                 }, 5000);
@@ -75,6 +96,19 @@ function popAbout() {
 }
 
 fallen_man.addEventListener("click", popAbout);
+
+
+function demonReset() {
+  intro_man.classList.remove("drop-anim");
+  intro_man.src = "images/man_swinging_matte.gif";
+  intro.scrollIntoView();
+  setTimeout(()=>{
+    fallen_man.src = "images/man_standing1_speech.png";
+    demon.style.display = "none";
+}, 300);
+}
+
+demon.addEventListener("click", demonReset);
 
 
 var project1 = document.getElementById("project1");

@@ -14,8 +14,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   </head>
   <body>
-    <!-- <h1>This is a heading</h1>
-        <p>This is a paragraph.</p> -->
+
+    <audio controls>
+        <source id="audio-scream" src="sounds/scream.wav" type="audio/wav">
+        <source id="audio-impact" src="sounds/impact.wav" type="audio/wav">
+      </audio>
 
     <div id="intro">
       <img id="title" src="images/title.png" alt="title" />
@@ -74,14 +77,17 @@
         <!-- </div> -->
       </div>
 
-      <div class="flex-row anchor-bottom">
-        <img id="fallen-man" src="images/man_standing1_speech.png" />
+      <div class="anchor-bottom">
+        <img class="test" id="fallen-man" src="images/man_standing1_speech.png" />
+      </div>
+
+      <div>
+          <img id="demon" src="images/demon.gif" alt="demon">
       </div>
 
       <div id="about">
-        <!-- <img src="images/man_swinging_black.gif" alt="About"> -->
 
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600px" height="300px" x="0px" y="0px"
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="card" width="600px" height="300px" x="0px" y="0px"
 	 viewBox="0 0 400 200" style="enable-background:new 0 0 400 200;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
@@ -596,7 +602,8 @@
 </a>
 </svg>
 
-
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script.js"></script>
