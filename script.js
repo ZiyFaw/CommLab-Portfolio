@@ -105,6 +105,7 @@ function demonReset() {
   setTimeout(()=>{
     fallen_man.src = "images/man_standing1_speech.png";
     demon.style.display = "none";
+    showCard = false;
 }, 300);
 }
 
