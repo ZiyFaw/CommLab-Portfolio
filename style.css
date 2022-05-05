@@ -19,6 +19,11 @@ body {
     overflow-y: hidden;
 }
 
+a {
+    width: 100%;
+    height: 100%;
+}
+
 #title {
     width: 40%;
     display: block;
@@ -110,7 +115,7 @@ body {
     margin-left: auto; */
 }
 
-#card {
+#about {
     display: none;
 }
 

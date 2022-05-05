@@ -54,13 +54,16 @@ function changeSource(elem, url) {
     elem.src = url;
 }
 
+// $(".fancybox").fancybox({'width':400,
+//                          'height':200,
+//                          'autoSize' : false});
 
 function popAbout() {
   if (showCard) {
     Fancybox.show(
       [
         {
-          src: "#card",
+          src: "#about",
           type: "inline",
         },
       ],
