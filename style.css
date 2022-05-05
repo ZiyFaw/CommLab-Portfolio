@@ -91,7 +91,7 @@ body {
 .project-thumbnail {
     /* width: 400px; */
     width: 50%;
-    min-width: 200px;
+    min-width: 300px;
     /* height: 220px; */
 }
 
@@ -120,11 +120,18 @@ body {
     100%{transform:translate3d(0,100vh,0); opacity: 0;}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
     .projects {
-        display: grid;
+        height: 70vh;
+        grid-column-gap: 0px;
+    }
+}
+
+@media (max-width: 800px) {
+    .projects {
+        /* display: grid;
         grid-column-gap: 20px;
-        grid-row-gap: 20px;
+        grid-row-gap: 20px; */
         height: 70vh;
         grid-template-areas: 
         "project1"
@@ -133,8 +140,18 @@ body {
         "project4";
     }
 
+    .project-elem {
+        max-height: 200px;
+        overflow: hidden;
+    }
+
     .project-thumbnail {
-        width: 20%;
+        width: 100%;
         min-width: 100px;
+    }
+
+    .project-thumbnail:hover {
+        height: 100%;
+        width: auto;
     }
 }
