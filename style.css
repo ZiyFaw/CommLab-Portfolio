@@ -110,6 +110,10 @@ body {
     margin-left: auto; */
 }
 
+#card {
+    display: none;
+}
+
 .drop-anim {
     animation: drop 5s linear 0.5s 1 normal forwards;
 }

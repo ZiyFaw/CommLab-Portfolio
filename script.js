@@ -5,6 +5,8 @@ var fallen_man = document.getElementById('fallen-man');
 
 var content = document.getElementById('content');
 
+var showCard = false;
+
 // window.onbeforeunload = function () {
 //     window.scrollTo(0, 0);
 //   }
@@ -40,6 +42,7 @@ function animateFallenMan() {
                     fallen_man.src = "images/poof.png";
                     setTimeout(()=>{
                         fallen_man.src = "images/card.png";
+                        showCard = true;
                     }, 2000);
                 }, 5000);
             }, 5000);
@@ -51,28 +54,30 @@ function changeSource(elem, url) {
     elem.src = url;
 }
 
+
+function popAbout() {
+  if (showCard) {
+    Fancybox.show(
+      [
+        {
+          src: "#card",
+          type: "inline",
+        },
+      ],
+      {
+        infinite: false,
+      }
+    );
+  }
+}
+
+fallen_man.addEventListener("click", popAbout);
+
+
 var project1 = document.getElementById("project1");
 var project2 = document.getElementById("project2");
 var project3 = document.getElementById("project3");
 var project4 = document.getElementById("project4");
-
-
-// $(project1).hover(function(){
-//     $(this).src = "images/thumb1_hover.png";
-//     }, function(){
-//     $(this).src = "images/thumb1.png";
-//   });
-
-
-//   function onHover()
-//   {
-//       $("#project1").attr('src', 'images/thumb1_hover.png');
-//   }
-  
-//   function offHover()
-//   {
-//       $("#project1").attr('src', 'images/thumb1.png');
-//   }
 
   project1.addEventListener("mouseover", function( event ) {
     $("#project1").attr('src', 'images/thumb1_hover.png');
