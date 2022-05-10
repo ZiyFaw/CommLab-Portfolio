@@ -55,8 +55,8 @@ audio {
 
 
 
-.projects {
-    display: grid;
+#projects {
+    display: none;
     column-gap: 200px;
     row-gap: 20px;
     /* grid-gap: 40px; */

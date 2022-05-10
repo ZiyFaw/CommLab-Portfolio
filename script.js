@@ -9,6 +9,8 @@ var content = document.getElementById('content');
 
 var intro = document.getElementById("intro");
 
+var projects = document.getElementById("projects");
+
 var scream = new Audio('sounds/scream.wav');
 
 var impact = new Audio('sounds/impact.wav');
@@ -63,6 +65,9 @@ function animateFallenMan() {
                     setTimeout(()=>{
                         fallen_man.src = "images/card.png";
                         demon.style.display = "inline";
+                        demon.classList.add('animate__animated', 'animate__rollIn');
+                        projects.style.display = "grid";
+                        projects.classList.add('animate__animated', 'animate__bounceIn');
                         showCard = true;
                     }, 2000);
                 }, 5000);
