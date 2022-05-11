@@ -170,7 +170,7 @@ audio {
 }
 
 @media (max-width: 800px) {
-    .projects {
+    #projects {
         /* display: grid;
         grid-column-gap: 20px;
         grid-row-gap: 20px; */
